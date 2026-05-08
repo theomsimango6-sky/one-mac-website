@@ -1,51 +1,48 @@
-export const metadata = {
-  title: "ONE M.A.C",
-  description: "Multimedia Enterprise",
-};
-
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function AboutPage() {
   return (
-    <html lang="en">
-      <body className="bg-black text-white">
-        <header className="border-b border-zinc-800">
-          <nav className="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
-            <Link
-              href="/"
-              className="text-2xl font-black tracking-wide"
-            >
-              ONE M.A.C
-            </Link>
+    <main className="min-h-screen bg-black text-white px-6 py-20">
+      <section className="max-w-5xl mx-auto">
+        <p className="uppercase tracking-[0.3em] text-gray-500 text-sm mb-6">
+          About ONE M.A.C
+        </p>
 
-            <div className="flex gap-6 text-sm font-medium">
-              <Link href="/" className="hover:text-gray-400 transition">
-                Home
-              </Link>
+        <h1 className="text-5xl md:text-6xl font-black leading-tight mb-10">
+          A Modern Multimedia
+          <br />
+          Enterprise Built For
+          <br />
+          The Digital Era.
+        </h1>
 
-              <Link href="/about" className="hover:text-gray-400 transition">
-                About
-              </Link>
+        <div className="grid md:grid-cols-2 gap-12">
+          <div>
+            <p className="text-lg text-gray-300 leading-relaxed mb-6">
+              ONE M.A.C is a multimedia enterprise focused on empowering brands,
+              creators, entrepreneurs, and entertainment platforms through
+              innovation, strategy, and creative execution.
+            </p>
 
-              <Link href="/services" className="hover:text-gray-400 transition">
-                Services
-              </Link>
+            <p className="text-lg text-gray-300 leading-relaxed">
+              We operate at the intersection of media, branding, digital
+              culture, talent development, and business growth — helping modern
+              businesses establish meaningful connections with global audiences.
+            </p>
+          </div>
 
-              <Link href="/brands" className="hover:text-gray-400 transition">
-                Brands
-              </Link>
+          <div className="bg-zinc-900 border border-zinc-800 rounded-3xl p-8">
+            <h2 className="text-2xl font-bold mb-6">Our Focus</h2>
 
-              <Link href="/contact" className="hover:text-gray-400 transition">
-                Contact
-              </Link>
-            </div>
-          </nav>
-        </header>
-
-        {children}
-      </body>
-    </html>
+            <ul className="space-y-4 text-gray-300">
+              <li>• Multimedia Production</li>
+              <li>• Brand Strategy & Identity</li>
+              <li>• Talent Development</li>
+              <li>• Digital Marketing</li>
+              <li>• Creative Partnerships</li>
+              <li>• Entertainment & Media Solutions</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
   );
 }
