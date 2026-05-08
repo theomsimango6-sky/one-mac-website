@@ -1,38 +1,15 @@
-<div className="grid md:grid-cols-3 gap-8">
+export default function ServicesPage() {
+  return (
+    <main className="min-h-screen bg-black text-white p-10">
+      <h1 className="text-5xl font-bold mb-6">Our Services</h1>
 
-  <div className="p-6 border rounded-xl">
-    <h2 className="text-xl font-semibold mb-2">MAC Music</h2>
-    <p className="text-gray-600 text-sm">
-      Sound production including composing, recording, mixing and mastering.
-    </p>
-  </div>
-
-  <div className="p-6 border rounded-xl">
-    <h2 className="text-xl font-semibold mb-2">MAC Visuals</h2>
-    <p className="text-gray-600 text-sm">
-      Video production, editing, animation, and graphic design services.
-    </p>
-  </div>
-
-  <div className="p-6 border rounded-xl">
-    <h2 className="text-xl font-semibold mb-2">MAC Professionals</h2>
-    <p className="text-gray-600 text-sm">
-      Talent management, modelling agency, beauty, and fashion services.
-    </p>
-  </div>
-
-  <div className="p-6 border rounded-xl">
-    <h2 className="text-xl font-semibold mb-2">MAC Tech</h2>
-    <p className="text-gray-600 text-sm">
-      IT solutions, digital systems, and technology-driven business tools.
-    </p>
-  </div>
-
-  <div className="p-6 border rounded-xl">
-    <h2 className="text-xl font-semibold mb-2">MMM Foods & Catering</h2>
-    <p className="text-gray-600 text-sm">
-      Catering services for formal and private events.
-    </p>
-  </div>
-
-</div>
+      <ul className="space-y-4 text-gray-300 text-lg">
+        <li>Brand Development</li>
+        <li>Media Production</li>
+        <li>Digital Marketing</li>
+        <li>Talent Management</li>
+        <li>Business Partnerships</li>
+      </ul>
+    </main>
+  );
+}
