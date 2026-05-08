@@ -1,26 +1,18 @@
-"use client";
-
-import { useState } from "react";
-
 export default function ContactPage() {
-  const [form, setForm] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
-
-  const [submitted, setSubmitted] = useState(false);
-
-  const handleSubmit = (e: any) => {
-    e.preventDefault();
-
-    console.log("Form Data:", form); // temporary (we’ll connect backend later)
-
-    setSubmitted(true);
-  };
-
   return (
-    <main className="min-h-screen bg-white text-gray-900 px-10 py-20">
-      <div className="max-w-3xl mx-auto">
+    <main className="min-h-screen bg-black text-white p-10">
+      <h1 className="text-5xl font-bold mb-6">Contact Us</h1>
 
-        <h
+      <p className="text-gray-400 mb-4">
+        Reach out to ONE M.A.C for partnerships, media, branding,
+        and business opportunities.
+      </p>
+
+      <div className="space-y-2 text-lg">
+        <p>Email: contact@onemac.com</p>
+        <p>Phone: +27 00 000 0000</p>
+        <p>Location: Johannesburg, South Africa</p>
+      </div>
+    </main>
+  );
+}
