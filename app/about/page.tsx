@@ -1,13 +1,54 @@
-export default function AboutPage() {
-  return (
-    <main className="min-h-screen bg-black text-white p-10">
-      <h1 className="text-5xl font-bold mb-6">About ONE M.A.C</h1>
+import "./globals.css";
+import Link from "next/link";
 
-      <p className="text-gray-400 max-w-3xl">
-        ONE M.A.C is a multimedia umbrella company focused on
-        entertainment, branding, digital innovation, and talent
-        development across Africa and global markets.
-      </p>
-    </main>
+export const metadata = {
+  title: "ONE M.A.C",
+  description: "Multimedia Enterprise",
+};
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return (
+    <html lang="en">
+      <body className="bg-black text-white">
+        <header className="border-b border-zinc-800">
+          <nav className="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
+            <Link
+              href="/"
+              className="text-2xl font-black tracking-wide"
+            >
+              ONE M.A.C
+            </Link>
+
+            <div className="flex gap-6 text-sm font-medium">
+              <Link href="/" className="hover:text-gray-400 transition">
+                Home
+              </Link>
+
+              <Link href="/about" className="hover:text-gray-400 transition">
+                About
+              </Link>
+
+              <Link href="/services" className="hover:text-gray-400 transition">
+                Services
+              </Link>
+
+              <Link href="/brands" className="hover:text-gray-400 transition">
+                Brands
+              </Link>
+
+              <Link href="/contact" className="hover:text-gray-400 transition">
+                Contact
+              </Link>
+            </div>
+          </nav>
+        </header>
+
+        {children}
+      </body>
+    </html>
   );
 }
