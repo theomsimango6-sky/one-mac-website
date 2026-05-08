@@ -1,13 +1,25 @@
-export default function Home() {
-  return (
-    <main className="min-h-screen bg-black text-white px-6 py-16">
-      <section className="max-w-6xl mx-auto">
-        <div className="mb-12">
-          <p className="text-sm uppercase tracking-[0.3em] text-gray-400 mb-4">
-            ONE M.A.C
-          </p>
+import Link from "next/link";
 
-          <h1 className="text-5xl md:text-7xl font-black leading-tight max-w-4xl">
+export default function HomePage() {
+  return (
+    <main className="min-h-screen bg-black text-white">
+      {/* NAVBAR */}
+      <nav className="flex items-center justify-between px-8 py-6 border-b border-white/10">
+        <h1 className="text-2xl font-bold tracking-wide">ONE M.A.C</h1>
+
+        <div className="flex gap-6 text-sm font-medium">
+          <Link href="/">Home</Link>
+          <Link href="/about">About</Link>
+          <Link href="/services">Services</Link>
+          <Link href="/brands">Brands</Link>
+          <Link href="/contact">Contact</Link>
+        </div>
+      </nav>
+
+      {/* HERO SECTION */}
+      <section className="px-8 py-24 md:px-20 bg-gradient-to-br from-black via-zinc-900 to-black">
+        <div className="max-w-5xl">
+          <h1 className="text-5xl md:text-7xl font-extrabold leading-tight mb-8">
             Building Brands.
             <br />
             Empowering Talent.
@@ -15,53 +27,77 @@ export default function Home() {
             Connecting Markets.
           </h1>
 
-          <p className="mt-8 text-lg text-gray-300 max-w-2xl leading-relaxed">
-            ONE M.A.C is a multimedia enterprise operating across entertainment,
-            digital media, branding, talent development, and creative strategy.
-            We partner with businesses, creators, and innovators to build
-            impactful experiences for modern audiences.
+          <p className="text-lg text-gray-300 max-w-3xl leading-8 mb-10">
+            ONE M.A.C is a multimedia enterprise focused on creators,
+            entrepreneurs, entertainment innovation, strategy, branding,
+            and digital experiences for modern audiences.
           </p>
 
-          <div className="flex gap-4 mt-10">
-            <button className="bg-white text-black px-6 py-3 rounded-xl font-semibold hover:scale-105 transition">
+          <div className="flex gap-4 flex-wrap">
+            <Link
+              href="/services"
+              className="bg-white text-black px-6 py-3 rounded-xl font-semibold hover:opacity-90 transition"
+            >
               Explore Services
-            </button>
+            </Link>
 
-            <button className="border border-gray-600 px-6 py-3 rounded-xl font-semibold hover:bg-white hover:text-black transition">
+            <Link
+              href="/contact"
+              className="border border-white/30 px-6 py-3 rounded-xl hover:bg-white hover:text-black transition"
+            >
               Contact Us
-            </button>
+            </Link>
           </div>
         </div>
+      </section>
 
-        <div className="grid md:grid-cols-3 gap-6 mt-20">
-          <div className="bg-zinc-900 p-6 rounded-2xl border border-zinc-800">
-            <h2 className="text-2xl font-bold mb-3">Media Production</h2>
+      {/* SERVICES */}
+      <section className="px-8 md:px-20 py-20">
+        <h2 className="text-4xl font-bold mb-12">What We Do</h2>
 
-            <p className="text-gray-400 leading-relaxed">
+        <div className="grid md:grid-cols-3 gap-8">
+          <div className="bg-zinc-900 p-8 rounded-2xl border border-white/10">
+            <h3 className="text-2xl font-bold mb-4">Media Production</h3>
+            <p className="text-gray-400 leading-7">
               Professional multimedia production for digital platforms,
-              entertainment brands, and commercial campaigns.
+              campaigns, and branded storytelling.
             </p>
           </div>
 
-          <div className="bg-zinc-900 p-6 rounded-2xl border border-zinc-800">
-            <h2 className="text-2xl font-bold mb-3">Brand Development</h2>
-
-            <p className="text-gray-400 leading-relaxed">
+          <div className="bg-zinc-900 p-8 rounded-2xl border border-white/10">
+            <h3 className="text-2xl font-bold mb-4">Brand Development</h3>
+            <p className="text-gray-400 leading-7">
               Strategic branding, identity design, and market positioning for
-              modern businesses and creators.
+              modern businesses.
             </p>
           </div>
 
-          <div className="bg-zinc-900 p-6 rounded-2xl border border-zinc-800">
-            <h2 className="text-2xl font-bold mb-3">Talent Management</h2>
-
-            <p className="text-gray-400 leading-relaxed">
+          <div className="bg-zinc-900 p-8 rounded-2xl border border-white/10">
+            <h3 className="text-2xl font-bold mb-4">Talent Management</h3>
+            <p className="text-gray-400 leading-7">
               Empowering creators, artists, and entrepreneurs through
-              partnerships, strategy, and digital growth.
+              development and visibility.
             </p>
           </div>
         </div>
       </section>
+
+      {/* FOOTER */}
+      <footer className="border-t border-white/10 px-8 md:px-20 py-10 text-gray-400">
+        <div className="flex flex-col md:flex-row justify-between gap-6">
+          <div>
+            <h3 className="text-white font-bold text-xl mb-2">ONE M.A.C</h3>
+            <p>Multimedia. Strategy. Innovation.</p>
+          </div>
+
+          <div className="flex gap-6">
+            <a href="#">Instagram</a>
+            <a href="#">TikTok</a>
+            <a href="#">YouTube</a>
+            <a href="#">LinkedIn</a>
+          </div>
+        </div>
+      </footer>
     </main>
   );
 }
